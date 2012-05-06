@@ -26,12 +26,12 @@ public class PerceptronColor {
 		for(int i=0;i<limit; i++ ){
 			respuestaObtenida=BoleanToInt(responde(color));
 			if(respuestaObtenida != respuestaEsperada){
-				w1=w1+FA*(respuestaEsperada-r)*(double)color.getRed();
-				w2=w2+FA*(respuestaEsperada-r)*(double)color.getGreen();
-				w3=w3+FA*(respuestaEsperada-r)*(double)color.getBlue();
-				//w1=w1+FA*(respuestaEsperada-respuestaObtenida)*(double)color.getRed();
-				//w2=w2+FA*(respuestaEsperada-respuestaObtenida)*(double)color.getGreen();
-				//w3=w3+FA*(respuestaEsperada-respuestaObtenida)*(double)color.getBlue();
+				//w1=w1+FA*(respuestaEsperada-r)*(double)color.getRed();
+				//w2=w2+FA*(respuestaEsperada-r)*(double)color.getGreen();
+				//w3=w3+FA*(respuestaEsperada-r)*(double)color.getBlue();
+				w1=w1+FA*(respuestaEsperada-respuestaObtenida)*(double)color.getRed();
+				w2=w2+FA*(respuestaEsperada-respuestaObtenida)*(double)color.getGreen();
+				w3=w3+FA*(respuestaEsperada-respuestaObtenida)*(double)color.getBlue();
 				b=b+FA*(respuestaEsperada-respuestaObtenida);
 				
 				System.out.println("-------> i:"+i+" b:"+b+"  w1:"+w1+"  w2:"+w2+"  w3:"+w3);
